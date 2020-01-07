@@ -7,10 +7,10 @@ bool smallerDigits(int number) {
         return true;
     }
     if (number % 10 > (number / 10) % 10) {
-        return 0;
+        return false;
     }
 
-    return number % 10 && smallerDigits(number / 10);   
+    return smallerDigits(number / 10);
 }
 
 int main() {
@@ -19,6 +19,6 @@ int main() {
     cin >> number;
 
     cout << boolalpha << smallerDigits(number) << endl;
-    
+
     return 0;
 }
