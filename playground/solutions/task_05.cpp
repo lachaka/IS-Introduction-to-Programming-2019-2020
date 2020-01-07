@@ -10,7 +10,7 @@ void removeDuplicates(char* str);
 int main() {
     char str[100];
     
-    cin >> str;
+    cin.getline(str, 100);
     
     removeDuplicates(str);
 
